@@ -6,9 +6,8 @@ Clone Coding Repository for [ReactJS for Beginners](https://nomadcoders.co/react
 
 <p>To use React, we add scripts for React. And those scripts are following:
 
-  <script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
-
-  <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
 
 First one is for React, it's a library which allows application bery interactive.
 
