@@ -38,3 +38,26 @@ When we use _React.createElement()_, inside of parenthesis, we must put HTML's t
     );
 
 </p>
+
+<p> When we want to render some multiple elements simultaneously, add components in an array then add it just like following:
+
+    const container = React.createElement("div", null, [h3, btn]);
+
+</p>
+
+<p> We can register not only id or style, but also **'event listener'** on property:
+
+    const btn = React.createElement(
+      "button",
+      {
+        onClick: () => console.log("im clicked"),
+        style: {
+          backgroundColor: "tomato"
+        }
+      },
+      "Click me"
+    );
+
+These attributes are showing that React JS is build for **interactivity**.
+
+</p>
