@@ -1,70 +1,63 @@
-# Getting Started with Create React App
+# nomadcoder-MovieWebService
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Clone Coding Repository for [ReactJS for Beginners](https://nomadcoders.co/react-for-beginners) Course of NomadCoder
 
-## Available Scripts
+### What I learned
 
-In the project directory, you can run:
+<p>To use React, we add scripts for React. And those scripts are following:
 
-### `npm start`
+    <script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+First one is for React, it's a library which allows application bery interactive.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Second one is for React-DOM, is a package(or library) allows to put all React elements in HTML body.
 
-### `npm test`
+</p>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<p>In HTML with JavaScript, first we create HTML elements, then we use them in JS, but in React, we create and use elements in script
 
-### `npm run build`
+    const span = React.createElement(
+      "span",
+      { id: "sexy-span", style: { color: "red" } },
+      "Hello, I'm a span"
+    );
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+When we use _React.createElement()_, inside of parenthesis, we must put HTML's tags.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+</p>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<p> By using React, we can integrate the codes where we declare elements, call them, and add some events in a single line of code! Like this:
 
-### `npm run eject`
+    const btn = React.createElement(
+      "button",
+      {
+        onClick: () => console.log("im clicked")
+      },
+      "Click me"
+    );
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+</p>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<p> When we want to render some multiple elements simultaneously, add components in an array then add it just like following:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+    const container = React.createElement("div", null, [h3, btn]);
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+</p>
 
-## Learn More
+<p> We can register not only id or style, but also **'event listener'** on property:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    const btn = React.createElement(
+      "button",
+      {
+        onClick: () => console.log("im clicked"),
+        style: {
+          backgroundColor: "tomato"
+        }
+      },
+      "Click me"
+    );
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+These attributes are showing that React JS is build for **interactivity**.
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+</p>
